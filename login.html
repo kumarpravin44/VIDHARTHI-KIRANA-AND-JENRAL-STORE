@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Boxicons -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+<title>Login - Vidharthi</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+
+    <!-- Left -->
+    <div class="header-left">
+        
+        <div class="menu-icon" id="menuToggle">
+    <i class='bx bx-grid-alt'></i>
+</div>
+    </div>
+
+    <!-- Center Logo -->
+    <div class="logo">
+        <img src="images/logo.png" alt="Vidharthi Logo">
+    </div>
+
+    <!-- Right -->
+    <div class="header-right">
+        
+
+        <div class="cart-icon">
+            <i class='bx bx-cart'></i>
+            <span class="cart-count">2</span>
+        </div>
+    </div>
+
+</div>
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Slide Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="menu-header">
+        <h3>Menu</h3>
+        <i class='bx bx-x' id="closeMenu"></i>
+    </div>
+
+    <ul>
+        <li><i class='bx bx-home'></i> Home</li>
+        <li><i class='bx bx-category'></i> Categories</li>
+        <li><i class='bx bx-star'></i> Top Picks</li>
+        <li><i class='bx bx-user'></i> My Account</li>
+        <li><i class='bx bx-log-in'></i> Login</li>
+    </ul>
+</div>
+<div class="content">
+<div class="login-container">
+
+    <div class="login-card">
+
+        
+
+        <h2>Login with OTP</h2>
+        <p class="subtitle">Enter your mobile number to continue</p>
+
+        <!-- Phone Input -->
+        <div class="input-box">
+            <i class='bx bx-phone'></i>
+            <input type="tel" placeholder="Enter Mobile Number">
+        </div>
+
+        <button class="primary-btn">Send OTP</button>
+
+        <!-- OTP Section -->
+        <div class="otp-section" style="display: none;">
+            <p>Enter 4-digit OTP</p>
+
+            <div class="otp-inputs">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+
+            <button class="primary-btn verify">Verify OTP</button>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+
+    <div class="nav-item active">
+        <i class='bx bx-home icon'></i>
+        <p>Grocery</p>
+    </div>
+
+    <div class="nav-item">
+        <i class='bx bx-leaf icon'></i>
+        <p>Vegetable</p>
+    </div>
+
+    <div class="nav-item">
+        <i class='bx bx-shopping-bag icon'></i>
+        <p>Basket</p>
+    </div>
+
+    <div class="nav-item">
+        <i class='bx bx-category icon'></i>
+        <p>Categories</p>
+    </div>
+
+</div>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+const closeMenu = document.getElementById("closeMenu");
+
+menuToggle.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+</script>
+
+</body>
+</html>
