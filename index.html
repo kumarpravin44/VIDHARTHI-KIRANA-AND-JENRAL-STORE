@@ -15,7 +15,10 @@
 
     <!-- Left -->
     <div class="header-left">
-        <i class='bx bx-grid-alt'></i>
+        
+        <div class="menu-icon" id="menuToggle">
+    <i class='bx bx-grid-alt'></i>
+</div>
     </div>
 
     <!-- Center Logo -->
@@ -33,6 +36,25 @@
         </div>
     </div>
 
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Slide Menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="menu-header">
+        <h3>Menu</h3>
+        <i class='bx bx-x' id="closeMenu"></i>
+    </div>
+
+    <ul>
+        <li><i class='bx bx-home'></i> Home</li>
+        <li><i class='bx bx-category'></i> Categories</li>
+        <li><i class='bx bx-star'></i> Top Picks</li>
+        <li><i class='bx bx-user'></i> My Account</li>
+        <li><i class='bx bx-log-in'></i> Login</li>
+    </ul>
 </div>
 
     <!-- Blue Background Section -->
@@ -164,6 +186,26 @@
     </div>
 
 </div>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+const closeMenu = document.getElementById("closeMenu");
 
+menuToggle.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
+});
+
+closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+</script>
 </body>
 </html>
