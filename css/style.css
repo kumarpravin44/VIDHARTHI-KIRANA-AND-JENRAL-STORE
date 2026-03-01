@@ -74,13 +74,17 @@ p{
 /* Cart Badge */
 .cart-count{
     position:absolute;
-    top:-6px;
-    right:-10px;
+    top: -2px;
+    right: -7px;
     background:#ff7a00;
     color:#fff;
     font-size:10px;
-    padding:3px 6px;
     border-radius:50%;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
     /* Content Area */
